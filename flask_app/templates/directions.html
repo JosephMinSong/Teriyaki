@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_directions.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="header">
+            <img src="../static/imgs/bowl.png" alt="bowl-img">
+            <h1>TERIYAKI</h1>
+            <h2>BOWL</h2>
+        </div>
+        <div class="address">
+            <a href="https://www.google.com/maps/place/Teriyaki+Bowl/@47.8594622,-121.9678213,17z/data=!3m1!4b1!4m6!3m5!1s0x549aa6f5c55731e3:0xf3a31713174a09c3!8m2!3d47.8594586!4d-121.9652464!16s%2Fg%2F1tcxpcz6" target="_blank">19821 State Rt 2</a>
+            <a href="https://www.google.com/maps/place/Teriyaki+Bowl/@47.8594622,-121.9678213,17z/data=!3m1!4b1!4m6!3m5!1s0x549aa6f5c55731e3:0xf3a31713174a09c3!8m2!3d47.8594586!4d-121.9652464!16s%2Fg%2F1tcxpcz6" target="_blank">Monroe, WA 98272</a>
+        </div>
+        <div class="links">
+            <ul>
+                <a href="/order" id="order">Order Now</a>
+                <a href="/directions">Directions</a>
+                {% if 'user_id' in session %}
+                    <a href="/signout">Sign Out</a>
+                {% else %}
+                    <a href="/signin_reg">Sign In/Register</a>
+                {% endif %}
+                <a href="https://www.yelp.com/biz/teriyaki-bowl-monroe" target="_blank">Our Yelp Page</a>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="upper-container">
+            <img src="../static/imgs/location.png" alt="store-front-img">
+            <div class="upper-container-text">
+                <div class="hours-header">
+                    <h2>Hours & Location</h2>
+                </div>
+                <div class="location-hours">
+                    <a href="https://www.google.com/maps/place/Teriyaki+Bowl/@47.8594622,-121.9678213,17z/data=!3m1!4b1!4m6!3m5!1s0x549aa6f5c55731e3:0xf3a31713174a09c3!8m2!3d47.8594586!4d-121.9652464!16s%2Fg%2F1tcxpcz6" target="_blank">
+                        19821 State Rt 2 Monroe, WA 98272
+                    </a>
+                    <p>Six Days a week</p>
+                    <p>Monday - Saturday: 11am to 9pm</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+        <div class="lower-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX4R2IIWuoH08ffS-Kgim2WirIX5g6hUM&callback=initMap">
+    </script>
+    <script src="../static/script_directions.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Open+Sans:wght@400;700;800&family=Roboto&family=Sigmar&display=swap');
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5rem;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.25);
+}
+
+.index-h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.reg-h2 {
+    font-family: 'Aclonica' , sans-serif;
+    background: radial-gradient(circle, rgba(11,119,152, 1) 40%, rgba(24,67,105, 1)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.log-in-h2 {
+    font-family: 'Aclonica' , sans-serif;
+    background: radial-gradient(circle, rgb(155, 160, 63) 0%, rgb(69, 182, 73) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+input{
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: 1.5px solid black;
+    border-radius: 15px;
+    margin-bottom: 1.25rem;
+}
+
+button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 1px solid black;
+}
+
+.register-button {
+    background: linear-gradient(to right, rgba(24,67,105, 0.8)  50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: 0.75s ease-out;
+}
+
+.login-button {
+    background: linear-gradient(to right, rgba(69, 182, 73, 0.75)  50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: 0.75s ease-out;
+}
+
+button:hover{
+    color: white;
+    background-position: left bottom;
+    cursor: pointer;
+    transition: 0.75s ease-out;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Dancing+Script&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body{
+    display: flex;
+    background-color: rgba(255, 235, 205, 0.3);
+    width: 100%;
+}
+
+main {
+    display: flex;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 1000px;
+    position: sticky;
+    top: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 5%;
+    font-family: 'Aclonic', sans-serif;
+    font-size: 2.25rem;
+}
+
+.header > h1 {
+    color: rgba(213, 66, 86);
+}
+
+.header > h2 {
+    color: rgba(27, 54, 143);
+}
+
+.header > img {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 125px;
+    transform: rotateZ(-10deg);
+    border-radius: 1rem;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    padding: 1rem;
+    margin: 0% 10%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    opacity: 75%
+}
+
+.links > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 7%;
+}
+
+#order {
+    border: 1px solid black;
+    padding: 1rem 2rem;
+}
+
+#order:hover {
+    background-color: rgba(128, 128, 128, 0.3);
+    transition: 1s;
+}
+
+.main {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}

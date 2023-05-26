@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_thankyou.css') }}">
+    <link rel="stylesheet" href="../static/style_thankyou.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="header">
+            <img src="../static/imgs/bowl.png" alt="bowl-img">
+            <h1>TERIYAKI</h1>
+            <h2>BOWL</h2>
+        </div>
+        <div class="address">
+            <a href="https://www.google.com/maps/place/Teriyaki+Bowl/@47.8594622,-121.9678213,17z/data=!3m1!4b1!4m6!3m5!1s0x549aa6f5c55731e3:0xf3a31713174a09c3!8m2!3d47.8594586!4d-121.9652464!16s%2Fg%2F1tcxpcz6" target="_blank">19821 State Rt 2</a>
+            <a href="https://www.google.com/maps/place/Teriyaki+Bowl/@47.8594622,-121.9678213,17z/data=!3m1!4b1!4m6!3m5!1s0x549aa6f5c55731e3:0xf3a31713174a09c3!8m2!3d47.8594586!4d-121.9652464!16s%2Fg%2F1tcxpcz6" target="_blank">Monroe, WA 98272</a>
+        </div>
+        <div class="links">
+            <ul>
+                <a href="/order" id="order">Order Now</a>
+                <a href="/directions">Directions</a>
+                {% if 'user_id' in session %}
+                    <a href="/signout">Sign Out</a>
+                {% else %}
+                    <a href="/signin_reg">Sign In/Register</a>
+                {% endif %}
+                <a href="https://www.yelp.com/biz/teriyaki-bowl-monroe" target="_blank">Our Yelp Page</a>
+            </ul>
+        </div>
+    </div>
+    <div class="thankyou">
+        <h1>Thank you for your order!</h1>
+        <h3>You should get an email with confirmation for your order shortly</h3>
+        <h3>Your order will be ready in approximately 10-15 minutes</h3>
+        <h3>Review your order: <span id="cust-order"></span></h3>
+    </div>
+
+    <script src="{{ url_for('static', filename='script_thankyou.js') }}"></script>
+</body>
+</html>

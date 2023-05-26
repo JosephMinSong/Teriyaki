@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_order_page.css') }}">
+    <script src="https://kit.fontawesome.com/9844049175.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='script_order.js') }}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="header">
+            <img src="../static/imgs/bowl.png" alt="bowl-img">
+            <h1>TERIYAKI</h1>
+            <h2>BOWL</h2>
+        </div>
+        <div class="address">
+            <a href="https://www.google.com/maps/place/Teriyaki+Bowl/@47.8594622,-121.9678213,17z/data=!3m1!4b1!4m6!3m5!1s0x549aa6f5c55731e3:0xf3a31713174a09c3!8m2!3d47.8594586!4d-121.9652464!16s%2Fg%2F1tcxpcz6" target="_blank">19821 State Rt 2</a>
+            <a href="https://www.google.com/maps/place/Teriyaki+Bowl/@47.8594622,-121.9678213,17z/data=!3m1!4b1!4m6!3m5!1s0x549aa6f5c55731e3:0xf3a31713174a09c3!8m2!3d47.8594586!4d-121.9652464!16s%2Fg%2F1tcxpcz6" target="_blank">Monroe, WA 98272</a>
+        </div>
+        <div class="links">
+            <ul>
+                <a href="/order" id="order">Order Now</a>
+                <a href="/directions">Directions</a>
+                {% if 'user_id' in session %}
+                    <a href="/signout">Sign Out</a>
+                {% else %}
+                    <a href="/signin_reg">Sign In/Register</a>
+                {% endif %}
+                <a href="https://www.yelp.com/biz/teriyaki-bowl-monroe" target="_blank">Our Yelp Page</a>
+            </ul>
+        </div>
+    </div>
+    <div class="order-container">
+
+        <h2>Order Teriyaki Bowl</h2>
+
+        <p>
+            Foods from restaurant that are picked up or delivered should be consumed immediately. 
+            Delivery or take-out foods purchased in advance for eating later should be maintained 
+            at proper temperatures until eaten.
+            We truly value the quality of our food and safety of our customers.
+        </p>
+
+        <p>
+            Our hours are listed on the side for your convenience; please make sure that you are placing
+            your order within those hours. **Any orders placed after our hours will be available for pick-up 
+            at 11am the next day.
+        </p>
+
+        {% if 'user_id' in session %}
+            {% if all_favs %}
+                <div class="favorites">
+                <h3>Welcome back, {{ logged_user.first_name }}</h3>
+                <h3>Want what you had last time? You definitely can!</h3>
+                <h3>Here are your favorites:</h3>
+                    {% for item in all_favs %}
+
+                        <div class="fav-items">
+                            <p> {{ item.name }} </p>
+                            <p> {{ item.description }} </p>
+                        </div>
+                        
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endif %}
+
+        <div class="parallax">
+            
+        </div>
+
+        <div class="order">
+            <div class="col-1">
+
+            </div>
+    
+            <div class="col-2">
+
+            </div>
+        </div>
+    </div>
+    <div class="cart">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+        </div>
+        <div class="cart-items">
+
+        </div>
+        <div class="cart-total">
+            <h4>Total:$ <span id="running-total">0</span></h4>
+        </div>
+        <div class="checkout-button">
+            <button id="checkout">Checkout</button>
+        </div>
+        <div class="error-message">
+
+        </div>
+    </div>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="{{ url_for('static', filename='script_stripe.js') }}"></script>
+</body>
+</html>

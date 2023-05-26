@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Dancing+Script&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body{
+    display: flex;
+    background-color: rgba(255, 235, 205, 0.3);
+    width: 100%;
+}
+
+main {
+    display: flex;
+    width: 1vh;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    height: 1000px;
+    top: 0;
+    gap: 1rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 5%;
+    font-family: 'Aclonic', sans-serif;
+    font-size: 2.25rem;
+}
+
+.header > h1 {
+    color: rgba(213, 66, 86);
+}
+
+.header > h2 {
+    color: rgba(27, 54, 143);
+}
+
+.header > img {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 125px;
+    transform: rotateZ(-10deg);
+    border-radius: 1rem;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    padding: 1rem;
+    margin: 0% 10%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    opacity: 75%
+}
+
+.links > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 7%;
+}
+
+#order {
+    border: 1px solid black;
+    padding: 1rem 2rem;
+}
+
+#order:hover {
+    background-color: rgba(128, 128, 128, 0.3);
+    transition: 1s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin: 5% 0% 5% 5%;
+}
+
+
+.upper-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.upper-container > img {
+    height: 700px;
+}
+
+.upper-container-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hours-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 2.75rem;
+    border-bottom: 3px solid black;
+    border-radius: .3rem;
+}
+
+.location-hours {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 10%;
+    gap: 2rem;
+}
+
+.lower-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#map {
+    height: 700px;
+    width: 90%;
+}

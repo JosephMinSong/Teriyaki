@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="header">
+            <img src="../static/imgs/bowl.png" alt="bowl-img">
+            <h1>TERIYAKI</h1>
+            <h2>BOWL</h2>
+        </div>
+        <div class="address">
+            <a href="https://www.google.com/maps/place/Teriyaki+Bowl/@47.8594622,-121.9678213,17z/data=!3m1!4b1!4m6!3m5!1s0x549aa6f5c55731e3:0xf3a31713174a09c3!8m2!3d47.8594586!4d-121.9652464!16s%2Fg%2F1tcxpcz6" target="_blank">19821 State Rt 2</a>
+            <a href="https://www.google.com/maps/place/Teriyaki+Bowl/@47.8594622,-121.9678213,17z/data=!3m1!4b1!4m6!3m5!1s0x549aa6f5c55731e3:0xf3a31713174a09c3!8m2!3d47.8594586!4d-121.9652464!16s%2Fg%2F1tcxpcz6" target="_blank">Monroe, WA 98272</a>
+        </div>
+        <div class="links">
+            <ul>
+                <a href="/order" id="order">Order Now</a>
+                <a href="/directions">Directions</a>
+                {% if 'user_id' in session %}
+                    <a href="/signout">Sign Out</a>
+                {% else %}
+                    <a href="/signin_reg">Sign In/Register</a>
+                {% endif %}
+                <a href="https://www.yelp.com/biz/teriyaki-bowl-monroe" target="_blank">Our Yelp Page</a>
+            </ul>
+        </div>
+    </div>
+    <div class="pictures">
+        <div class="pictures-left">
+            <img src="../static/imgs/chicken-teriyaki.png" alt="chicken-teriyaki">
+            <img src="../static/imgs/spicy-chicken.png" alt="spicy-chicken">
+        </div>
+        <div class="pictures-right">
+            <img src="../static/imgs/bento.png" alt="bento-box">
+            <img src="../static/imgs/gyoza.png" alt="gyoza">
+        </div>
+    </div>
+</body>
+</html>
