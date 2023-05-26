@@ -15,16 +15,10 @@ form {
     margin-bottom: 2rem;
 }
 
-.reg-h2 {
+.reg-h2,
+.index-h2 {
     font-family: 'Aclonica' , sans-serif;
-    background: radial-gradient(circle, rgba(11,119,152, 1) 40%, rgba(24,67,105, 1)100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.log-in-h2 {
-    font-family: 'Aclonica' , sans-serif;
-    background: radial-gradient(circle, rgb(155, 160, 63) 0%, rgb(69, 182, 73) 100%);
+    background-color: rgba(27, 54, 143);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -43,21 +37,16 @@ input{
 
 button{
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-size: 1.25rem;
     padding: 1rem;
     border-radius: 2rem;
     border: 1px solid black;
+    font-weight: 800;
 }
 
-.register-button {
-    background: linear-gradient(to right, rgba(24,67,105, 0.8)  50%, white 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: 0.75s ease-out;
-}
-
+.register-button,
 .login-button {
-    background: linear-gradient(to right, rgba(69, 182, 73, 0.75)  50%, white 50%);
+    background: linear-gradient(to right, rgba(24,67,105, 0.8)  50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: 0.75s ease-out;
