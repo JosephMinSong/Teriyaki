@@ -100,7 +100,7 @@ addEventListener('load', () => {
                                     <p>Quantity:</p>
                                     <p id=${data.default_price}> ${data.quantity} </p>
                                 </div>
-                                <button class='remove_from_cart' id=${data.id} value=${data.id}> Remove </button>
+                                <button class='remove_from_cart' id=${data.id} value=${data.id}> <i class="fa-solid fa-trash"></i> </button>
                             </div>
                         `
                         // Add remove button right after the cart item is created
@@ -162,7 +162,7 @@ addEventListener('load', () => {
                             <p>Quantity:</p>
                             <p id=${item.default_price}> ${item.quantity} </p>
                         </div>
-                        <button class='remove_from_cart' value=${item.id}> Remove </button>
+                        <button class='remove_from_cart' value=${item.id}> <i class="fa-solid fa-trash"></i> </button>
                     </div>
                 `
     

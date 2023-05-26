@@ -304,3 +304,7 @@ summary {
     margin: 5% 0%;
 }
 
+.remove_from_cart:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
