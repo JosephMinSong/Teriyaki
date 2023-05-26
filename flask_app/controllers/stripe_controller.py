@@ -176,8 +176,7 @@ def stripe_webhook():
         print('INVALID SIGNATURE')
         return {}, 400
 
-    # Handle the checkout session completed event
-    # Print the order and save the order into our database if the customer has an account with us
+    # Handle the checkout session completed event and print order
     if event['type'] == 'checkout.session.completed':
         stripe_session_webhook = event['data']['object']
         all_line_items = stripe.checkout.Session.list_line_items(stripe_session_webhook['id'])
