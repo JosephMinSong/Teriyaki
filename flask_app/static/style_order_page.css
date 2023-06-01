@@ -26,6 +26,18 @@ main {
     top: 0;
 }
 
+@media (max-width: 390px) {
+    body{
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .nav {
+        height: auto;
+        position:static;
+    } 
+}
+
 .header {
     display: flex;
     flex-direction: column;
@@ -130,6 +142,18 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media (max-width: 390px) {
+    .order-container {
+        margin: 0;
+        width: 100vw;
+    }
+
+    .parallax {
+        width: 100vw;
+        height: 350px;
+    }
 }
 
 .order {

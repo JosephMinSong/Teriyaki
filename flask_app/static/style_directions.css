@@ -27,6 +27,18 @@ main {
     gap: 1rem;
 }
 
+@media (max-width: 390px) {
+    body{
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .nav {
+        height: auto;
+        position:static;
+    } 
+}
+
 .header {
     display: flex;
     flex-direction: column;

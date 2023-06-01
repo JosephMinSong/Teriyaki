@@ -32,7 +32,6 @@ def order():
         user_data = {'id' : session['user_id']}
         logged_user = User.get_user_by_id(user_data)
         all_favs = User.get_favorites(user_data)
-        print(all_favs)
     else: 
         logged_user = False
         all_favs = False
